@@ -1,0 +1,15 @@
+#form-div {
+    width: max-content;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#table-div {
+    margin-top: 2em;
+    border: 1px solid black;
+}
+
+table {
+    text-align: center;
+}
