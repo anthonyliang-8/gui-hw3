@@ -16,7 +16,8 @@ function getForm() {
 
     console.log(min_col_val);
 
-    const trHeader = document.createElement("tr");
+    const trHeader = document.createElement("tr")
+    trHeader.appendChild(document.createElement("th"));
     for (var col = min_col_val; col <= max_col_val; col++) {
       const th = document.createElement("th");
       th.innerText = col;
@@ -26,6 +27,9 @@ function getForm() {
 
     for (var row = min_row_val; row <= max_row_val; row++) {
         const trData = document.createElement("tr");
+        const th = document.createElement("th");
+        th.innerText = row;
+        trData.appendChild(th);
         for (var col = min_col_val; col <= max_col_val; col++) {
           const td = document.createElement("td");
           // Calculate and display the result in the cell
