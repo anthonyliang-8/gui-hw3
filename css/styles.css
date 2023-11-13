@@ -1,17 +1,41 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
 #form-div {
-    width: max-content;
-    padding: 1em;
-    border: 1px solid black;
-    border-radius: 5px;
+  width: max-content;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 #table-div {
-    margin-top: 2em;
-    border: 1px solid black;
+  margin-top: 2em;
+  border: 1px solid black;
+  overflow: scroll;
+  width: 50%;
+  height: 500px;
 }
 
 table {
-    text-align: center;
+  text-align: center;
+  border-spacing: 0;
 }
 
+#thead {
+  position: sticky;
+  top: 0;
+  background-color: lightblue;
+}
+th,
+td {
+  padding: 5px;
+}
 
+th:first-child,
+td:first-child {
+  position: sticky;
+  left: 0;
+  background-color: lightblue;
+}

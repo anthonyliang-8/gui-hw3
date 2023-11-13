@@ -11,21 +11,32 @@ function getForm() {
     var min_row_val = parseInt(document.getElementById("min_row_val").value);
     var max_row_val = parseInt(document.getElementById("max_row_val").value);
 
+    // clears tbody and thead for empty table
     tbody.innerHTML = "";
     thead.innerHTML = "";
 
     console.log(min_col_val);
 
-    const trHeader = document.createElement("tr")
-    trHeader.appendChild(document.createElement("th"));
-    for (var col = min_col_val; col <= max_col_val; col++) {
-      const th = document.createElement("th");
-      th.innerText = col;
-      trHeader.appendChild(th);
+    if (min_col_val > 250 || max_col_val > 250 || min_row_val > 250 || max_row_val > 250) {
+      alert("Values can't exceed 250!");
+      return 0;
     }
-    thead.appendChild(trHeader);
 
-    for (var row = min_row_val; row <= max_row_val; row++) {
+    if (min_col_val > max_col_val) {
+      alert("Your max col value needs to be bigger than your min col value.");
+    } else if (min_row_val > max_row_val) {
+      alert("Your max row value needs to be bigger than your min row value.");
+    } else {
+      const trHeader = document.createElement("tr");
+      trHeader.appendChild(document.createElement("th"));
+      for (var col = min_col_val; col <= max_col_val; col++) {
+        const th = document.createElement("th");
+        th.innerText = col;
+        trHeader.appendChild(th);
+      }
+      thead.appendChild(trHeader);
+
+      for (var row = min_row_val; row <= max_row_val; row++) {
         const trData = document.createElement("tr");
         const th = document.createElement("th");
         th.innerText = row;
@@ -39,7 +50,7 @@ function getForm() {
         }
         tbody.appendChild(trData);
       }
-
+    }
     form.reset();
   });
 }
