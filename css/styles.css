@@ -3,11 +3,19 @@
   font-family: "Poppins", sans-serif;
 }
 
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #form-div {
   width: max-content;
   padding: 1em;
   border: 1px solid black;
   border-radius: 5px;
+  background-color: lightblue;
 }
 
 #table-div {
@@ -31,6 +39,7 @@ table {
 th,
 td {
   padding: 5px;
+  border: 1px solid black;
 }
 
 th:first-child,
