@@ -3,7 +3,7 @@
   Course: GUI I
   Email: anthony_liang@student.uml.edu
 */
-// setting all elements to values
+// setting all elements in html to values in javascript
 const tbody = document.getElementById("tbody");
 const thead = document.getElementById("thead");
 const formDiv = document.getElementById("form-div");
