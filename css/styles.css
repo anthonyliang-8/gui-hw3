@@ -1,8 +1,15 @@
+/*
+  Name: Anthony Liang
+  Course: GUI I
+  Email: anthony_liang@student.uml.edu
+*/
+
 * {
   font-family: "Open Sans", sans-serif;
   font-family: "Poppins", sans-serif;
 }
 
+/* flex container to handle the form and table div */
 #container {
   display: flex;
   justify-content: center;
@@ -11,7 +18,7 @@
 }
 
 #form-div {
-  width: max-content;
+  width: max-content; /* set width to max-content to fit all of content and also prevent wrapping */
   padding: 1em;
   border: 1px solid black;
   border-radius: 5px;
@@ -22,7 +29,7 @@
   margin-top: 2em;
   border: 1px solid black;
   overflow: scroll;
-  width: 50%;
+  width: 50%; /* set the width of the table div to 50% of the window screen */
   height: 500px;
 }
 
@@ -30,7 +37,7 @@ table {
   text-align: center;
   border-spacing: 0;
 }
-
+/* making the table head container sticky so it's elements won't move (fixed) vertically */
 #thead {
   position: sticky;
   top: 0;
@@ -42,6 +49,7 @@ td {
   border: 1px solid black;
 }
 
+/* makes the first column sticky so it's elements won't move (fixed) when moving horizontally */
 th:first-child,
 td:first-child {
   position: sticky;
